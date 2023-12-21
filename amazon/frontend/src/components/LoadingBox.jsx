@@ -3,7 +3,7 @@ import React from 'react'
 function LoadingBox() {
   return (
     <div>
-      <span class="loader"></span>
+      <span className="loader"></span>
     </div>
   )
 }
