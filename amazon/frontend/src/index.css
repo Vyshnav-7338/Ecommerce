@@ -70,3 +70,6 @@ main{
     transform: rotate(360deg);
   }
 } 
+.img-thumbnail{
+  height: 80px;
+}
