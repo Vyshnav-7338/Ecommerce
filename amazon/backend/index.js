@@ -7,6 +7,7 @@ const dotenv =require('dotenv');
 const seedRoute = require("./routes/seedRoutes");
 const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
+const orderRouter = require("./routes/orderRoutes");
 
 dotenv.config()
 
@@ -28,6 +29,7 @@ mongoose.connect(process.env.MONGODB_URL).then(()=>{
 app.use('/api/seed',seedRoute)
 app.use('/api/products',productRouter)
 app.use('/api/users',userRouter)
+app.use('/api/order',orderRouter)
 
 app.use((err,req,res,next)=>{
   res.status(500).send({message:err.message})
